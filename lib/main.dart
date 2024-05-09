@@ -1,3 +1,4 @@
+import 'package:astro_login/Screens/Cursos/DetalhesDeCursos/analiseDeAcoes.dart';
 import 'package:astro_login/Screens/Cursos/cursos.dart';
 import 'package:astro_login/Screens/home.dart';
 import 'package:astro_login/Screens/sobreNos.dart';
@@ -34,7 +35,11 @@ final router = GoRouter(
     ),
     GoRoute(
       path: '/cursos',
-      builder: (context, state) => cursos(),
+      builder: (context, state) => Cursos(),
+    ),
+    GoRoute(
+      path: '/cursoAnaliseDeAcoes',
+      builder: (context, state) => YoutubePlayerPage(),
     ),
     GoRoute(
       path: '/quiz',

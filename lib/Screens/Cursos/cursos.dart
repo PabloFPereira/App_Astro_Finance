@@ -1,7 +1,10 @@
+import 'package:astro_login/mock/curso_mock.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class cursos extends StatelessWidget {
+class Cursos extends StatelessWidget {
+  var _cursos = CursoMock.cursos;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,18 +14,18 @@ class cursos extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(20.0),
         children: [
-          CourseCard(
-            title: 'Curso de Introdução às Finanças Pessoais',
-            description: 'Aprenda a gerenciar suas finanças de forma eficaz.',
-            instructor: 'Kaisser',
-            onPressed: () {
-              _navigateToCourseDetails(
-                  context,
-                  'Curso de Introdução às Finanças Pessoais',
-                  'Descrição do curso...',
-                  'Kaisser');
-            },
-          ),
+          /* ListView.builder(
+            itemCount: _cursos.length,
+            shrinkWrap: true,
+            itemBuilder: (context, index) => CourseCard(
+              title: 'Curso de Introdução às Finanças Pessoais',
+              description: 'Aprenda a gerenciar suas finanças de forma eficaz.',
+              instructor: 'Kaisser',
+              onPressed: () {
+                context.go('curso-detalhes');
+              },
+            ),
+          ),*/
           SizedBox(height: 20.0),
           CourseCard(
             title: 'Investimentos para Iniciantes',
