@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 context.push('/cursos');
               },
-              child: Text('Explorar Cursos'),
+              child: Text('Conheça nossos Roadmaps'),
             ),
             SizedBox(height: 20.0),
             ElevatedButton(
@@ -42,9 +42,9 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Adicione a lógica para navegar para a tela de vídeos aqui
+                context.push('/todasasaulas');
               },
-              child: Text('Assistir Vídeos'),
+              child: Text('Aulas'),
             ),
           ],
         ),
