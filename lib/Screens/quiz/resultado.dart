@@ -4,7 +4,10 @@ import 'package:go_router/go_router.dart';
 class resultado extends StatelessWidget {
   final int score;
 
-  const resultado({Key? key, required this.score}) : super(key: key);
+  const resultado({
+    Key? key,
+    required this.score,
+  }) : super(key: key);
 
   String determinarTipoInvestidor(int score) {
     if (score >= 0 && score <= 2) {

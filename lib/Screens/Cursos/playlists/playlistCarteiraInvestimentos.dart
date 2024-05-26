@@ -1,55 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class Cursos extends StatelessWidget {
+class PlaylistCarteiraInvest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Roadmaps'),
+        title: Text('Roadmap - Carteiras de Investimento'),
       ),
       body: ListView(
         padding: EdgeInsets.all(20.0),
         children: [
           SizedBox(height: 20.0),
           CourseCard(
-              title: 'Como Funciona o Dinheiro',
-              description:
-                  'Entenda de uma vez por todas como funciona o dinhehiro e nossa economia.',
-              instructor: 'Bruno Perrucho e Eduardo Feldberg',
-              onPressed: () {
-                context.push('/playlisteconomia');
-              }),
+            title:
+                'Como montar uma Carteira de Investimentos para Iniciantes (Na Pratica)',
+            description:
+                'Imagine Warren Buffett investindo seu primeiro 114 dolares na Cities Service, Ray Dalio iniciando com 300 dolares na Northeast Airlines, e Luiz Barsi, construindo sua fortuna a partir de 500 dolares por mês em ações da Anderson Clayton.',
+            instructor: 'Tiagro Nigro',
+            onPressed: () {
+              context.push('/aulacarteirainvest1');
+            },
+          ),
           SizedBox(height: 20.0),
           CourseCard(
-            title: 'Como Montar uma Carteira de Investimentos',
+            title: 'Como Montar uma Boa Carteira de Investimento - Analise',
             description:
-                'Como montar do zero uam carteira de investimento diversificada na visão dos 3 maiores nomes de finaças do Brasil.',
-            instructor:
-                'Tiagro Nigro, Gustavo Serbasi e Raul - Investidor Sardinha',
+                'Uma carteira de investimentos precisa ser equilibrada e conversar diretamente com os seus objetivos de curto, médio e longo prazos.',
+            instructor: 'Gustavo Cerbasi',
             onPressed: () {
-              context.push('/playlistcarteirainvest');
+              context.push('/aulacarteirainvest2');
             },
           ),
           SizedBox(height: 20.0),
           CourseCard(
             title:
-                'Como Escolher a Melhor Corretora e o melhor banco para você ',
+                'Como Criar uma carteira de investimentos com ações, FIIs e Renda Fixa ?',
             description:
-                'Entenda de uma vez por todas qual é o melhor banco e a melhor corretora para voce investir com segurança.',
-            instructor: 'Nathalia Arcuri e Economista Sincero',
+                'A maioria dos investidores iniciantes fica empolgada com a ideia de investir, mas não sabe por onde começar. E isso acaba fazendo muita gente investir do jeito errado e perder dinheiro na Bolsa de Valores. Por isso, no vídeo de hoje, decidi fazer uma coisa diferente. Preparei uma aula bem completa para te ensinar, do zero, como montar uma carteira de investimentos.',
+            instructor: 'Investidor Sardinha - Raul Sena',
             onPressed: () {
-              context.push('/playlistMelhorBanco');
-            },
-          ),
-          SizedBox(height: 20.0),
-          CourseCard(
-            title: 'Oque é Trade ? ',
-            description:
-                'Aprenda a analisar gráficos e identificar tendências do mercado de ações com Day e Swing Trade.',
-            instructor: 'Caio Caúla e Humbled Trader',
-            onPressed: () {
-              context.push('/playlistTrade');
+              context.push('/aulacarteirainvest3');
             },
           ),
         ],

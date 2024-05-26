@@ -42,9 +42,9 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                context.push('/todasasaulas');
+                context.push('/infoUsuario');
               },
-              child: Text('Aulas'),
+              child: Text('Central do Aluno'),
             ),
           ],
         ),

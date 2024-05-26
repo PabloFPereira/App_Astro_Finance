@@ -1,55 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class Cursos extends StatelessWidget {
+class PlaylistEconomia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Roadmaps'),
+        title: Text('Roadmap - Como Funciona o Dinheiro'),
       ),
       body: ListView(
         padding: EdgeInsets.all(20.0),
         children: [
           SizedBox(height: 20.0),
           CourseCard(
-              title: 'Como Funciona o Dinheiro',
-              description:
-                  'Entenda de uma vez por todas como funciona o dinhehiro e nossa economia.',
-              instructor: 'Bruno Perrucho e Eduardo Feldberg',
-              onPressed: () {
-                context.push('/playlisteconomia');
-              }),
-          SizedBox(height: 20.0),
-          CourseCard(
-            title: 'Como Montar uma Carteira de Investimentos',
+            title: 'Como funciona a economia?',
             description:
-                'Como montar do zero uam carteira de investimento diversificada na visão dos 3 maiores nomes de finaças do Brasil.',
-            instructor:
-                'Tiagro Nigro, Gustavo Serbasi e Raul - Investidor Sardinha',
+                'Economia é a ciência que estuda a produção, consumo e distribuição de bens essenciais para a vida humana e a melhoria da qualidade de vida. Entender como o governo controla essa ciência é fundamental para a compreensão dos rumos da economia e de como isso afeta a população.',
+            instructor: 'Bruno Perrucho',
             onPressed: () {
-              context.push('/playlistcarteirainvest');
+              context.push('/aulaeconomia');
             },
           ),
           SizedBox(height: 20.0),
           CourseCard(
-            title:
-                'Como Escolher a Melhor Corretora e o melhor banco para você ',
+            title: 'Apenda a Organizar suas Finanças',
             description:
-                'Entenda de uma vez por todas qual é o melhor banco e a melhor corretora para voce investir com segurança.',
-            instructor: 'Nathalia Arcuri e Economista Sincero',
+                'PLANILHA DE ORGANIZAÇÃO FINANCEIRA GRÁTIS - Aprenda a organizar suas finanças!',
+            instructor: 'Eduardo Feldberg',
             onPressed: () {
-              context.push('/playlistMelhorBanco');
-            },
-          ),
-          SizedBox(height: 20.0),
-          CourseCard(
-            title: 'Oque é Trade ? ',
-            description:
-                'Aprenda a analisar gráficos e identificar tendências do mercado de ações com Day e Swing Trade.',
-            instructor: 'Caio Caúla e Humbled Trader',
-            onPressed: () {
-              context.push('/playlistTrade');
+              context.push('/aulaorganizacaofin');
             },
           ),
         ],

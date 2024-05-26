@@ -1,8 +1,20 @@
-import 'package:astro_login/Screens/Cursos/aulas/analiseDeAcoes.dart';
+import 'package:astro_login/Screens/Cursos/playlists/playlistCarteiraInvestimentos.dart';
+import 'package:astro_login/Screens/Cursos/playlists/playlistEconomia.dart';
+import 'package:astro_login/Screens/Cursos/playlists/playlistTrade.dart';
+import 'package:astro_login/Screens/Cursos/playlists/playlistmelhoranco.dart';
+import 'package:astro_login/data/aulas/carteiraDeInvestimentos1.dart';
+import 'package:astro_login/data/aulas/carteiraDeInvestimentos2.dart';
+import 'package:astro_login/data/aulas/carteiraDeInvestimentos3.dart';
+import 'package:astro_login/data/aulas/daytrade.dart';
+import 'package:astro_login/data/aulas/economia.dart';
+import 'package:astro_login/data/aulas/melhorBanco.dart';
+import 'package:astro_login/data/aulas/ondeInvestir.dart';
+import 'package:astro_login/data/aulas/organizarFinancas.dart';
+import 'package:astro_login/data/aulas/swingTrade.dart';
 import 'package:astro_login/Screens/Cursos/cursos.dart';
-import 'package:astro_login/Screens/Cursos/todasAsAulas.dart';
-import 'package:astro_login/home.dart';
-import 'package:astro_login/sobreNos.dart';
+import 'package:astro_login/Screens/paginasSecundarias/infoUsuario.dart';
+import 'package:astro_login/Screens/paginasSecundarias/home.dart';
+import 'package:astro_login/Screens/paginasSecundarias/sobreNos.dart';
 import 'package:astro_login/Screens/login/createLogin.dart';
 import 'package:astro_login/Screens/quiz/resultado.dart';
 import 'package:astro_login/Screens/login/login.dart';
@@ -35,17 +47,64 @@ final router = GoRouter(
       builder: (context, state) => sobreNos(),
     ),
     GoRoute(
-      path: '/todasasaulas',
-      builder: (context, state) => TodasAsAulas(),
-    ),
-    GoRoute(
       path: '/cursos',
       builder: (context, state) => Cursos(),
     ),
+    // AULAS ---------------------------------------------------
     GoRoute(
-      path: '/cursoAnaliseDeAcoes',
-      builder: (context, state) => AnaliseDeAcoes(),
+      path: '/aulaSwingTrade',
+      builder: (context, state) => SwingTrade(),
     ),
+    GoRoute(
+      path: '/auladaytrade',
+      builder: (context, state) => DayTrade(),
+    ),
+    GoRoute(
+      path: '/aulamelhorbanco',
+      builder: (context, state) => MelhorBanco(),
+    ),
+    GoRoute(
+      path: '/aulaondeinvestir',
+      builder: (context, state) => OndeInvestir(),
+    ),
+    GoRoute(
+      path: '/aulacarteirainvest3',
+      builder: (context, state) => CarteiraInvestimentos3(),
+    ),
+    GoRoute(
+      path: '/aulacarteirainvest2',
+      builder: (context, state) => CarteiraInvestimentos2(),
+    ),
+    GoRoute(
+      path: '/aulacarteirainvest1',
+      builder: (context, state) => CarteiraInvestimentos1(),
+    ),
+    GoRoute(
+      path: '/aulaeconomia',
+      builder: (context, state) => Economia(),
+    ),
+    GoRoute(
+      path: '/aulaorganizacaofin',
+      builder: (context, state) => OrganizarFinancas(),
+    ),
+    // PLAYLISTS---------------------------------------------------
+    GoRoute(
+      path: '/playlistTrade',
+      builder: (context, state) => PlaylistTrade(),
+    ),
+    GoRoute(
+      path: '/playlistMelhorBanco',
+      builder: (context, state) => PlaylistBanco(),
+    ),
+    GoRoute(
+      path: '/playlisteconomia',
+      builder: (context, state) => PlaylistEconomia(),
+    ),
+    GoRoute(
+      path: '/playlistcarteirainvest',
+      builder: (context, state) => PlaylistCarteiraInvest(),
+    ),
+//---------------------------------------------------------------------------
     GoRoute(
       path: '/quiz',
       builder: (context, state) => QuizScreen(),
@@ -53,6 +112,10 @@ final router = GoRouter(
     GoRoute(
       path: '/home',
       builder: (context, state) => HomeScreen(),
+    ),
+    GoRoute(
+      path: '/infoUsuario',
+      builder: (context, state) => InfoUsuario(),
     ),
     GoRoute(
       path: '/resultado',

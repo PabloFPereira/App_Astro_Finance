@@ -1,55 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class Cursos extends StatelessWidget {
+class PlaylistBanco extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Roadmaps'),
+        title:
+            Text('Roadmap - Como Escolher o Melhor Banco e a Melhor Corretora'),
       ),
       body: ListView(
         padding: EdgeInsets.all(20.0),
         children: [
           SizedBox(height: 20.0),
           CourseCard(
-              title: 'Como Funciona o Dinheiro',
-              description:
-                  'Entenda de uma vez por todas como funciona o dinhehiro e nossa economia.',
-              instructor: 'Bruno Perrucho e Eduardo Feldberg',
-              onPressed: () {
-                context.push('/playlisteconomia');
-              }),
-          SizedBox(height: 20.0),
-          CourseCard(
-            title: 'Como Montar uma Carteira de Investimentos',
+            title: 'Onde investir seu dinheiro?',
             description:
-                'Como montar do zero uam carteira de investimento diversificada na visão dos 3 maiores nomes de finaças do Brasil.',
-            instructor:
-                'Tiagro Nigro, Gustavo Serbasi e Raul - Investidor Sardinha',
+                'Eu falei sobre as diferenças entre Nubank, Inter e XP, e como cada um deles pode ser uma opção interessante dependendo do seu perfil de investidor. Mas calma, não vou contar tudo aqui, porque quero que você assista ao vídeo completo para entender melhor.',
+            instructor: 'Nathalia Arcuri',
             onPressed: () {
-              context.push('/playlistcarteirainvest');
+              context.push('/aulaondeinvestir');
             },
           ),
           SizedBox(height: 20.0),
           CourseCard(
-            title:
-                'Como Escolher a Melhor Corretora e o melhor banco para você ',
+            title: 'Quais os Melhores Bancos de 2024',
             description:
-                'Entenda de uma vez por todas qual é o melhor banco e a melhor corretora para voce investir com segurança.',
-            instructor: 'Nathalia Arcuri e Economista Sincero',
+                'análise completa dos resultados dos maiores bancos do Brasil e vou te mostrar em quais eu investiria. Será que os bancos digitais como Nubank e Inter estão realmente superando os grandes bancos? Ou será que o Itaú e o Banco do Brasil seguem à frente? Descubra quem está nadando em lucro, quem está crescendo mais rápido e quem está ficando para trás nessa corrida.',
+            instructor: 'Economista Sincero',
             onPressed: () {
-              context.push('/playlistMelhorBanco');
-            },
-          ),
-          SizedBox(height: 20.0),
-          CourseCard(
-            title: 'Oque é Trade ? ',
-            description:
-                'Aprenda a analisar gráficos e identificar tendências do mercado de ações com Day e Swing Trade.',
-            instructor: 'Caio Caúla e Humbled Trader',
-            onPressed: () {
-              context.push('/playlistTrade');
+              context.push('/aulamelhorbanco');
             },
           ),
         ],

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class AnaliseDeAcoes extends StatefulWidget {
+class CarteiraInvestimentos2 extends StatefulWidget {
   @override
-  _AnaliseDeAcoesState createState() => _AnaliseDeAcoesState();
+  _CarteiraInvestimentos2State createState() => _CarteiraInvestimentos2State();
 }
 
-class _AnaliseDeAcoesState extends State<AnaliseDeAcoes> {
+class _CarteiraInvestimentos2State extends State<CarteiraInvestimentos2> {
   late YoutubePlayerController _controller;
   bool _bomSelected = false;
   bool _ruimSelected = false;
@@ -16,7 +16,7 @@ class _AnaliseDeAcoesState extends State<AnaliseDeAcoes> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'mcDqMo2NJdM',
+      initialVideoId: 'N6fipdSFegY',
       flags: YoutubePlayerFlags(
         autoPlay: true,
         mute: true,
@@ -28,7 +28,7 @@ class _AnaliseDeAcoesState extends State<AnaliseDeAcoes> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Análise de Ações'),
+        title: Text('Pilares para uma Boa Carteira'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

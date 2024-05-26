@@ -123,12 +123,22 @@ class _QuizScreenState extends State<QuizScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: List.generate(
                 questions[currentQuestionIndex]['options'].length,
-                (index) => ElevatedButton(
-                  onPressed: () {
-                    checkAnswer(index);
-                  },
-                  child:
-                      Text(questions[currentQuestionIndex]['options'][index]),
+                (index) => Column(
+                  children: [
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          checkAnswer(index);
+                        },
+                        child: Text(
+                          questions[currentQuestionIndex]['options'][index],
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 10.0), // Espaço entre os botões
+                  ],
                 ),
               ),
             ),

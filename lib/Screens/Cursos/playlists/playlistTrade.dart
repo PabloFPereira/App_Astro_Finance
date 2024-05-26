@@ -1,55 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class Cursos extends StatelessWidget {
+class PlaylistTrade extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Roadmaps'),
+        title: Text('Roadmap - Trade'),
       ),
       body: ListView(
         padding: EdgeInsets.all(20.0),
         children: [
           SizedBox(height: 20.0),
           CourseCard(
-              title: 'Como Funciona o Dinheiro',
-              description:
-                  'Entenda de uma vez por todas como funciona o dinhehiro e nossa economia.',
-              instructor: 'Bruno Perrucho e Eduardo Feldberg',
-              onPressed: () {
-                context.push('/playlisteconomia');
-              }),
-          SizedBox(height: 20.0),
-          CourseCard(
-            title: 'Como Montar uma Carteira de Investimentos',
+            title: 'Day Trade do ZERO',
             description:
-                'Como montar do zero uam carteira de investimento diversificada na visão dos 3 maiores nomes de finaças do Brasil.',
-            instructor:
-                'Tiagro Nigro, Gustavo Serbasi e Raul - Investidor Sardinha',
+                'Day Trade aula zero. Muitas pessoas me perguntam como começar no day trade. Resolvi fazer um curso grátis day trade do zero passo a passo. É um vídeo para iniciantes, mas acredito que possa ajudar a frisas questões importantes mesmo para quem já tem alguma experiência.',
+            instructor: 'Caio Caúla',
             onPressed: () {
-              context.push('/playlistcarteirainvest');
+              context.push('/auladaytrade');
             },
           ),
           SizedBox(height: 20.0),
           CourseCard(
-            title:
-                'Como Escolher a Melhor Corretora e o melhor banco para você ',
+            title: 'Swing Trading Crash Course',
             description:
-                'Entenda de uma vez por todas qual é o melhor banco e a melhor corretora para voce investir com segurança.',
-            instructor: 'Nathalia Arcuri e Economista Sincero',
+                'Swing trading is a great way for students or people who are busy with a regular 9-7 job, to make some side income.',
+            instructor: 'Humbled Trader',
             onPressed: () {
-              context.push('/playlistMelhorBanco');
-            },
-          ),
-          SizedBox(height: 20.0),
-          CourseCard(
-            title: 'Oque é Trade ? ',
-            description:
-                'Aprenda a analisar gráficos e identificar tendências do mercado de ações com Day e Swing Trade.',
-            instructor: 'Caio Caúla e Humbled Trader',
-            onPressed: () {
-              context.push('/playlistTrade');
+              context.push('/aulaSwingTrade');
             },
           ),
         ],
